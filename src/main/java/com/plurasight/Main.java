@@ -4,8 +4,9 @@ package com.plurasight;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        String nameFormatter = NameFormatter.format("Luis","Vasquez");
-        nameFormatter = NameFormatter.format("Mr. Luis Orlando Vasquez, Engineer");
-        System.out.print(nameFormatter);
+        System.out.println(NameFormatter.format("Luis","Vasquez"));
+        System.out.println(NameFormatter.format("Mr.","Luis","Orlando","Vasquez","Student"));
+        System.out.println(NameFormatter.format("Mr. Luis Orlando Vasquez, Engineer"));
+        System.out.println(NameFormatter.format("Luis Vasquez"));
     }
 }

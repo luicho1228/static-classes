@@ -6,7 +6,7 @@ public class NameFormatter {
     private NameFormatter(){}
 
     public static String format(String firstName, String lastName){
-        return String.format("%s %s",lastName,firstName);
+        return String.format("%s, %s",lastName,firstName);
     }
     public static String format(String prefix, String firstName, String middleName, String lastName, String suffix){
         return  String.format("%s, %s %s %s, %s", lastName,prefix,firstName,middleName,suffix);
@@ -18,11 +18,12 @@ public class NameFormatter {
         if (suffixSplit.length > 1) {
             suffix = ", " + suffixSplit[1].strip();
         }
+        System.out.println(suffixSplit.length);
         String lastName = fullNameSplit[fullNameSplit.length-1];
         StringBuilder name = new StringBuilder();
         for(int i = 0; i < fullNameSplit.length-1 ; i++){
             name.append(fullNameSplit[i]).append(" ");
         }
-        return String.format("%s %s%s", lastName,name,suffix);
+        return String.format("%s, %s%s", lastName,name,suffix);
     }
 }
